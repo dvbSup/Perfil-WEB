@@ -1,72 +1,282 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" id="topo">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Valeriano - Perfil</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
   <body>
+    <input chec type="checkbox" id="botao-menu"> 
+    <header id="headerH">
+      <div>
+        <h1>Bruno</h1>
+        <label for="botao-menu">&#9776;</label>
+      </div>
+    </header>
     <header id="headerV">
+      <div id="headerVcircle"></div>
 
-        <div id="headerVcircle"></div>
-      
-        <div id="profile">
+      <div id="profile">
         <div id="profilephoto"></div>
         <div id="proflename">BRUNO VALERIANO</div>
       </div>
       <nav id="navmenu">
-        <a href="">
-            <ion-icon name="home-outline"></ion-icon> Inicio
-        </a>
-        <a href="">
-            <ion-icon name="person-outline"></ion-icon> Sobre Mim
-        </a>
-        <a href="">
-            <ion-icon name="build-outline"></ion-icon> Serviços
-        </a>
-        <a href="">
-            <ion-icon name="briefcase-outline"></ion-icon> Portfólio
-        </a>
-        <a href="">
-            <ion-icon name="reader-outline"></ion-icon> Blogs
-        </a>
-        <a href="">
-            <ion-icon name="call-outline"></ion-icon> Contatos
-        </a>
+        <a href="#sectioninicio"> <ion-icon name="home-outline"></ion-icon> Inicio </a>
+        <a href="#sobremin"> <ion-icon name="person-outline"></ion-icon> Sobre Mim </a>
+        <a href="#servico"> <ion-icon name="build-outline"></ion-icon> Serviços </a>
+        <a href="#portfolio"><ion-icon name="briefcase-outline"></ion-icon> Portfólio</a>
+        <a href=""> <ion-icon name="reader-outline"></ion-icon> Blogs </a>
+        <a href="#contato"> <ion-icon name="call-outline"></ion-icon> Contatos </a>
       </nav>
 
       <nav id="navsocial">
         <a href="" target="_blank">
-            <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-facebook"></ion-icon>
         </a>
         <a href="" target="_blank">
-            <ion-icon name="logo-twitter"></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
         </a>
         <a href="" target="_blank">
-            <ion-icon name="logo-instagram"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
         </a>
         <a href="" target="_blank">
-            <ion-icon name="logo-linkedin"></ion-icon>
+          <ion-icon name="logo-linkedin"></ion-icon>
         </a>
         <a href="" target="_blank">
-            <ion-icon name="logo-pinterest"></ion-icon>
+          <ion-icon name="logo-pinterest"></ion-icon>
         </a>
       </nav>
-
     </header>
     <main>
-        <section id="sectioninicio">
-            <h2>Ola eu sou</h2>
-            <h1>Bruno Valeriano</h1>
-            <p>Eu Projeto e desenvolvo serviços para cliente de todos
-                os tipos, serviços web e lojas online.</p>
-                <a download="Curriculo - Bruno Valeriano" href="">Download CV</a>
-        </section>
+      <section id="sectioninicio">
+        <div id="iniciodescricao">
+          <h2>Ola eu sou</h2>
+          <h1>Bruno Valeriano</h1>
+          <p>
+            Eu Projeto e desenvolvo serviços para cliente de todos os tipos,
+            serviços web e lojas online.
+            DJ, Técnico em Informática, e Suporte de Sistemas.
+          </p>
+          <a download="Curriculo - Bruno Valeriano" href="">Download CV</a>
+        </div>
+        <div id="iniciofoto"> <img src="imagens/BR1.png" alt=""></div>
+      </section>
+      <section id="sobremin">
+        <div id="sobremingradefotos">
+          
+          <div id="sobreminftcol1">
+            <figure class="sobreminfotos">
+              <img src="imagens/BR1.png" alt="">
+            </figure>
+            <figure class="sobreminfotos">
+              <img src="imagens/BR1.png" alt="">
+            </figure>
+          </div>
+
+          <div id="sobreminftcol2">
+            <figure class="sobreminfotos">
+              <img src="imagens/BR1.png" alt="">
+            </figure>
+            <figure class="sobreminfotos">
+              <img src="imagens/BR1.png" alt="">
+            </figure>
+          </div>
+            
+          </div>
+        </div>
+        
+        <div id="sobremintexto">
+          <h2>Sobre Mim</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odio architecto modi sunt, eum velit tempore aut deserunt, beatae molestiae nobis ut culpa enim iure esse unde placeat nam commodi.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum facilis et, est dolor, omnis necessitatibus, aspernatur cumque modi iste harum ducimus rerum minus deleniti cupiditate id tempore earum repellat? Libero.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eveniet error autem, aspernatur ea non est nesciunt. Numquam corrupti rerum, fugit architecto enim, sint tempore natus voluptas similique hic accusamus!
+          </p>
+          
+        <div id="sobreminrodape">
+            <div>
+              <div class="sobreminquantidade">
+                <p>5K</p>
+                <P>Projetos Completos</P>
+              </div>
+              <a href="">Conato</a>
+            </div>
+             
+          <div>
+              <div  class="sobreminquantidade">
+                <p>3K</p>
+                <p>Clientes Satisfeitos</p>
+              </div>
+              <a href="">Portfólio</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="servico">
+      <h2>Serviços</h2>
+      <div id="servicogrid">
+        
+        <div class="card">
+          <div>
+            <ion-icon name="code-working-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis tempore consequatur cum hic. Officiis quidem quos sit officia ex fugit blanditiis doloribus ducimus, minus tenetur eum reiciendis delectus nobis.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <ion-icon name="code-working-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis tempore consequatur cum hic. Officiis quidem quos sit officia ex fugit blanditiis doloribus ducimus, minus tenetur eum reiciendis delectus nobis.</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div>
+            <ion-icon name="code-working-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis tempore consequatur cum hic. Officiis quidem quos sit officia ex fugit blanditiis doloribus ducimus, minus tenetur eum reiciendis delectus nobis.</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div>
+            <ion-icon name="code-working-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis tempore consequatur cum hic. Officiis quidem quos sit officia ex fugit blanditiis doloribus ducimus, minus tenetur eum reiciendis delectus nobis.</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div>
+            <ion-icon name="code-working-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis tempore consequatur cum hic. Officiis quidem quos sit officia ex fugit blanditiis doloribus ducimus, minus tenetur eum reiciendis delectus nobis.</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div>
+            <ion-icon name="code-working-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis tempore consequatur cum hic. Officiis quidem quos sit officia ex fugit blanditiis doloribus ducimus, minus tenetur eum reiciendis delectus nobis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="portfolio">
+      <h2>Portfólio</h2>
+      
+      <div id="portfoliogrid">
+      
+        <div class="portfoliocardimg">
+          <div class="overflow">
+            <div id="img-1"></div>
+          </div>
+            <div class="portfoliocardtitulo">
+                  <p>10/05/2024 -Lista de Links</p>
+                  <p>Projeto Desenvolvido durante o curso de HTML/CSS 
+                  - Criação de Websites no Senac de Gurupi.</p>
+            </div>
+        </div>
+
+        <div class="portfoliocardimg">
+          <div class="overflow">
+            <div id="img-2"></div>
+          </div>
+            <div class="portfoliocardtitulo">
+                  <p>10/05/2024 -Lista de Links</p>
+                  <p>Projeto Desenvolvido durante o curso de HTML/CSS 
+                  - Criação de Websites no Senac de Gurupi.</p>
+            </div>
+        </div>
+
+        <div class="portfoliocardimg">
+          <div class="overflow">
+            <div id="img-3"></div>
+          </div>
+            <div class="portfoliocardtitulo">
+                  <p>10/05/2024 -Lista de Links</p>
+                  <p>Projeto Desenvolvido durante o curso de HTML/CSS 
+                  - Criação de Websites no Senac de Gurupi.</p>
+            </div>
+        </div>
+
+        <div class="portfoliocardimg">
+          <div class="overflow">
+            <div id="img-4"></div>
+          </div>
+            <div class="portfoliocardtitulo">
+                  <p>10/05/2024 -Lista de Links</p>
+                  <p>Projeto Desenvolvido durante o curso de HTML/CSS 
+                  - Criação de Websites no Senac de Gurupi.</p>
+            </div>
+        </div>
+      </div>
+
+    </section>
+     
+    <section id="contato">
+      <h2> Contato</h2>
+      
+      <div id="contatorow">
+        <div id="contatorowtext">
+          <h3>Qual a sua História? Entre em Contato</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, ab quia quasi esse et veritatis porro quidem, ad excepturi tempore ullam accusantium quisquam error est architecto? Laudantium reprehenderit expedita nihil!</p>
+          <div>
+            <ion-icon name="person-outline"></ion-icon>
+            <p>Av Para entre 4 e 5 Galeria RC</p>
+          </div>
+          <div>
+            <ion-icon name="person-outline"></ion-icon>
+            <p> djbrunovaleriano@gmail.com</p>
+          </div>
+          <div>
+            <ion-icon name="person-outline"></ion-icon>
+            <p> +55 63 99265-3811</p>
+          </div>
+
+        </div>
+
+        <div id="contatorowform">
+          <h3> Escreva Algo </h3>
+          <div>
+            <input type="text" placeholder="Nome">
+            <input type="email" name="" id="inputE-mail" placeholder="E-mail">
+          </div>
+          <input type="text" id="inputSubject" placeholder="Assunto">
+          <textarea name="" id="" placeholder="Sua Mensagem"></textarea>
+          <a href="">Enviar</a>
+
+        </div>
+      </div>
+    </section>
+
     </main>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

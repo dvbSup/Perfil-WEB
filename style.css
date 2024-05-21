@@ -5,7 +5,9 @@
     padding: 0;
     box-sizing: border-box;
     }
-
+html {
+    scroll-behavior: smooth;
+}
 :root{
     --text-color:#fff;
     --border-color:rgba(255,255,255,0.3);
@@ -14,6 +16,42 @@
     --details:#2fbf71;
 }
 /* cabeçalho vertical fixo */
+#headerH {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--background-main);
+    color: var(--text-color);
+    font-family: "Rubik",sans-serif;
+    z-index: 3; /* passar por cima do main */
+    display: none;
+}
+
+#headerH div {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+#botao-menu {
+    display: none;
+}
+
+label[for="botao-menu"] {
+    cursor: pointer;
+    background: var(--details);
+    font-size: 30px;
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #headerV {
     position: fixed;
@@ -23,6 +61,7 @@
     color: var(--text-color);
     font-family: "Rubik", sans-serif;
     overflow: hidden;
+    z-index: 3;
 }
 
 #headerVcircle {
@@ -103,12 +142,13 @@
     transition: background 0.2s;
     padding: 8px;
 }
+
 #navsocial a:hover{
     background: var(--details);
 }
 
 /* CONTEUDO PRINCIPAL */
-main{
+main {
     position: relative;
     margin-left: 250px;
     background: var(--background-main);
@@ -116,10 +156,334 @@ main{
     height: auto;
     color: var(--text-color);
     font-family: "Rubik", sans-serif;
+    /* margin-top: 70px; */
     }
+section{
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 90%;
+}
+
+section a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    width: 160px;
+    background: var(--details);
+    box-shadow: 3px 3px 0px var(--text-color);
+    justify-content: center;
+    padding: 10px 20px; /* altura */
+}    
+
+section p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+section h2 {
+    font-size: 25px;
+    font-weight:normal;
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+section h3 {
+    margin-bottom: 30px;
+}
 
 section#sectioninicio {
-    width: 90%;
+    /* width: 90%;
     margin: 0 auto;
-    height: 100vh;
+    height: 100vh; */
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* atingir um valor de px quebrar linha para baixo */
+
+}
+section#sectioninicio>div{
+    width: 49%;
+    min-width: 300px;
+    /* border: 1px solid greenyellow; */
+    }
+
+section#sectioninicio h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+    
+}
+
+
+section#sectioninicio img{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid var(--details);
+}
+
+@media (max-width: 1200px) {
+    #headerH {
+        display: flex; /* aparecer */
+    }
+    #headerV {
+        margin-left: -250px;
+        transition: all 0.4s;
+        top: 0; /* aparecer na frente do meu nome do topo */
+    }
+    main {
+        margin-left: 0;
+        margin-top: 70px;
+    }
+    #botao-menu:checked ~ #headerV {
+        margin-left: 0;
+    }
+    
+    section#servico h2{
+        margin-top: 70px;
+    }
+    
+}
+
+section#sobremin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}
+
+section#sobremin div {
+    width: 49%;
+}
+
+#sobremingradefotos {
+    display: flex;
+    gap: 20px;
+}
+
+.sobreminfotos{
+    margin-bottom: 20px;
+}
+
+#sobreminftcol2 {
+    padding-top: 50px;
+}
+
+section#sobremin img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+section#sobremin h2{
+    font-weight: bolder;
+}
+
+#sobreminrodape {
+    display: flex;
+    gap: 55px;
+}
+
+.sobreminquantidade {
+    display: flex;
+    width: 160px;
+}
+.sobreminquantidade p:first-child {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.sobreminquantidade p:last-child {
+    line-height: 1.2;
+  /*   border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+section#servico #servicogrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   /*  border: 1px solid red; */
+}
+
+.card {
+    width: 49%;
+    min-width: 300px;
+    background: var(--background-header);
+    margin-bottom: 20px;
+    padding: 40px;
+    display: flex;
+}
+
+.card ion-icon{
+    font-size: 70px;
+    margin-right: 10px;
+}
+
+.card:hover {
+    background: var(--details);
+}
+
+section#servico h2 {
+    font-weight: bolder;
+}
+
+/* Portfolio */
+
+section#portfolio #portfoliogrid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfoliocardimg {
+    position: relative;
+    width: 49%;
+    min-width: 300px;
+    height: 250px;
+    margin-bottom: 100px;
+}
+
+.overflow {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.overflow>div {
+    height: 100%;
+}
+
+.overflow>div:hover {
+    transform: scale(1.1);
+}
+
+.overflow #img-1 {
+    background: url(imagens/TB1.jpg) no-repeat center center/cover;
+}
+
+.overflow #img-2 {
+    background: url(imagens/TB1.jpg) no-repeat center center/cover;
+}
+
+.overflow #img-3 {
+    background: url(imagens/TB1.jpg) no-repeat center center/cover;
+}
+
+.overflow #img-4 {
+    background: url(imagens/TB1.jpg) no-repeat center center/cover;
+}
+
+section#portfolio .portfoliocardtitulo {
+    position: absolute;
+    width: 90%;
+    height: auto;
+    background: var(--background-header);
+    bottom: -30%;
+    right: 0;
+    padding: 20px;
+}
+
+.portfoliocardtitulo p {
+    font-size: 12;
+}
+
+.portfoliocardtitulo p:last-child {
+    font-weight: bolder;
+}
+
+/* contato */
+
+section#contato #contatorow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section#contato #contatorow>div {
+    width: 49%;
+    min-height: 300px;
+    background: var(--background-header);
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+section#contato #contatorowtext div {
+    display: flex;
+    align-items: center;
+}
+
+section#contato #contatorowtext div {
+    display: flex;
+    align-items: center;
+
+}
+
+section#contato #contatorowtext p {
+    margin: auto 0;
+}
+
+section#contato input {
+    background: none;
+    border: 1px solid var(--text-color);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#contatorowform div {
+    display: flex;
+    justify-content: space-between;
+}
+
+section#contato #inputname, #inputE-mail {
+    width: 49%;
+}
+
+section#contato #inputSubject {
+    width: 100%;
+}
+
+section#contato textarea {
+    background: none;
+    border: 1px solid var(--text-color);
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+
+@media (max-width: 690px) {
+    secition#sectioninicio {
+        border: 1px solid red;
+        justify-content: center;
+    }
+    section#sectioninicio #iniciodescricao {
+        width: 100%;
+    }
+    section#sectioninicio #iniciofoto{
+        margin: 50px 0 auto;
+    }
+
+    section#sobremin #sobremintexto {
+        width: 100%;
+    }
+    
+    section#sobremin #sobremingradefotos {
+        margin: 50px 0 auto;
+        width: 100%;
+    }
+    #sobreminrodape{
+        gap: 80px;
+    }
+    section#servico .card{
+        width: 100%;
+    }
+    .portfoliocardimg {
+        width: 100%;
+        margin-bottom: 200px;
+    }
 }
