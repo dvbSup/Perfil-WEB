@@ -486,4 +486,8 @@ section#contato textarea {
         width: 100%;
         margin-bottom: 200px;
     }
+    section#contato #contatorow>div {
+        width: 100%;
+        min-width: 300px;
+    }
 }
